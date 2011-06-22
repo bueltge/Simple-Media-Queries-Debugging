@@ -26,6 +26,7 @@
  *                 small Laptops, Netbooks, etc.
  * 1200 pixels     Widescreen displays, portrait and landscape
  * 1800 pixels     Large screens
+ * pixel-ratio     iPhone 4 and high pixel ratio devices
  */
 
 @media all and (-webkit-min-device-pixel-ratio : 1.5),
