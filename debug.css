@@ -27,6 +27,17 @@
  * 1200 pixels     Widescreen displays, portrait and landscape
  * 1800 pixels     Large screens
  * pixel-ratio     iPhone 4 and high pixel ratio devices
+ * 
+ * 
+ * Portrait versus Landscape:
+ * 
+ * Portrait orientation allows more lines of engraving than landscape, 
+ * but a smaller number of characters per line.  Landscape orientation 
+ * offers fewer lines than portrait, but more characters per line.
+ * ---    -------
+ * | |    |     |
+ * | |    -------
+ * ---
  */
 
 @media all and (-webkit-min-device-pixel-ratio : 1.5),
