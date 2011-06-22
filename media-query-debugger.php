@@ -38,48 +38,9 @@
 		@media all and (max-width: 479px) {
 			aside { width:100%; padding:5px; margin-left:0; float:none; } aside img, aside h2 { display:none; } aside li { font-size:.85em; margin-bottom:5px; } aside li a[href] { background:none; padding-left:0; }	
 		}
-		
-		body::before{
-			font-weight: 900;
-			display: block;
-			text-align: center;
-			position: absolute;
-			padding: 1em;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 100;
-		}
-		
-		@media all and (min-width: 981px) {
-			body::before{
-				content: "media query (> 981px) fired";
-				background: rgba( 205, 51, 51, 0.8 );
-			}
-		}
-		
-		@media all and (min-width: 601px) and (max-width: 980px) {
-			body::before{
-				content: "media query (601 < 980px) fired";
-				background: rgba( 202, 225, 255, 0.8 );
-			}
-		}
-		
-		@media all and (min-width: 480px) and (max-width: 600px) {
-			body::before{
-				content: "media query (480 < 600px) fired";
-				background: rgba( 102, 205, 170, 0.8 );
-			}
-		}
-		
-		@media all and (max-width: 479px) {
-			body::before{
-				content: "media query (< 479px) fired";
-				background: rgba( 255, 127, 36, 0.8 );
-			}
-		}
 	</style>
+	
+	<link rel="stylesheet" type="text/css" href="debug.css" />
 	
 </head> 
 <body>
