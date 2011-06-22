@@ -18,28 +18,36 @@
 /**
  * Dimensions to check for:
  *
- * 320 pixels      Phones: portrait mode
- * 480 pixels      Phones: landscape mode
+ * 320 pixels      Smartphones: portrait and landscape mode
+ * 480 pixels      Smartphones: landscape mode
  * 600 pixels      Tablets, e.g. Amazon Kindle (600×800), Barnes & Noble Nook (600×1024): portrait mode
  * 768 pixels      Tablets, e.g. iPad (768×1024): portrait mode
  * 1024 pixels     Tablets, e.g. iPad (1024×768): landscape mode,
- *                 small Laptops, Netbooks, etc
- * 1200 pixels     Widescreen displays
+ *                 small Laptops, Netbooks, etc.
+ * 1200 pixels     Widescreen displays, portrait and landscape
+ * 1800 pixels     Large screens
  */
 
-@media all and (min-width: 1200px) and (orientation: landscape) { body::before { content: "min-width: 1200px (landscape)"; background: rgba(255, 0, 0, 0.8); }}
-@media all and (max-width: 1200px) and (orientation: landscape) { body::before { content: "max-width: 1200px (landscape)"; background: rgba(255, 0, 0, 0.8); }}
+@media all and (-webkit-min-device-pixel-ratio : 1.5),
+       all and (min-device-pixel-ratio : 1.5) { body::before { content: "iPhone 4 and high pixel ratio devices"; background: rgba(139, 69, 19, 0.8); } }
 
-@media all and (max-width: 1024px) and (orientation: landscape) { body::before { content: "max-width: 1024px (landscape)"; background: rgba(0, 153, 153, 0.8); }}
-@media all and (max-width: 1024px) and (orientation: portrait)  { body::before { content: "max-width: 1024px (portrait)";  background: rgba(0, 153, 153, 0.8); }}
+@media all and (min-width: 1800px) and (orientation: landscape) { body::before { content: "min-width: 1800px (landscape)"; background: rgba(165, 42, 42, 0.8); } }
+@media all and (max-width: 1800px) and (orientation: landscape) { body::before { content: "max-width: 1800px (landscape)"; background: rgba(165, 42, 42, 0.8); } }
 
-@media all and (max-width: 768px) and (orientation: landscape)  { body::before { content: "max-width: 768px (landscape)";  background: rgba(159, 238, 0, 0.8); }}
-@media all and (max-width: 768px) and (orientation: portrait)   { body::before { content: "max-width: 768px (portrait)";   background: rgba(159, 238, 0, 0.8); }}
+@media all and (max-width: 1200px) and (orientation: landscape) { body::before { content: "max-width: 1200px (landscape)"; background: rgba(255, 0, 0, 0.8); } }
+@media all and (max-width: 1200px) and (orientation: portrait) { body::before { content: "max-width: 1200px (portrait)"; background: rgba(255, 0, 0, 0.8); } }
 
-@media all and (max-width: 600px) and (orientation: landscape)  { body::before { content: "max-width: 600px (landscape)";  background: rgba(0, 204, 0, 0.8); }}
-@media all and (max-width: 600px) and (orientation: portrait)   { body::before { content: "max-width: 600px (portrait)";   background: rgba(0, 204, 0, 0.8); }}
+@media all and (max-width: 1024px) and (orientation: landscape) { body::before { content: "max-width: 1024px (landscape)"; background: rgba(0, 153, 153, 0.8); } }
+@media all and (max-width: 1024px) and (orientation: portrait)  { body::before { content: "max-width: 1024px (portrait)";  background: rgba(0, 153, 153, 0.8); } }
 
-@media all and (max-width: 480px) and (orientation: landscape)  { body::before { content: "max-width: 480px (landscape)";  background: rgba(255, 116, 0, 0.8); }}
-@media all and (max-width: 480px) and (orientation: portrait)   { body::before { content: "max-width: 480px (portrait)";   background: rgba(255, 116, 0, 0.8); }}
+@media all and (max-width: 768px) and (orientation: landscape)  { body::before { content: "max-width: 768px (landscape)";  background: rgba(159, 238, 0, 0.8); } }
+@media all and (max-width: 768px) and (orientation: portrait)   { body::before { content: "max-width: 768px (portrait)";   background: rgba(159, 238, 0, 0.8); } }
 
-@media all and (max-width: 320px) and (orientation: portrait)   { body::before { content: "max-width: 320px (portrait)";   background: rgba(205, 0, 116, 0.8); }}
+@media all and (max-width: 600px) and (orientation: landscape)  { body::before { content: "max-width: 600px (landscape)";  background: rgba(0, 204, 0, 0.8); } }
+@media all and (max-width: 600px) and (orientation: portrait)   { body::before { content: "max-width: 600px (portrait)";   background: rgba(0, 204, 0, 0.8); } }
+
+@media all and (max-width: 480px) and (orientation: landscape)  { body::before { content: "max-width: 480px (landscape)";  background: rgba(255, 116, 0, 0.8); } }
+@media all and (max-width: 480px) and (orientation: portrait)   { body::before { content: "max-width: 480px (portrait)";   background: rgba(255, 116, 0, 0.8); } }
+
+@media all and (max-width: 320px) and (orientation: landscape)  { body::before { content: "max-width: 320px (landscape)";   background: rgba(205, 0, 116, 0.8); } }
+@media all and (max-width: 320px) and (orientation: portrait)   { body::before { content: "max-width: 320px (portrait)";   background: rgba(205, 0, 116, 0.8); } }
