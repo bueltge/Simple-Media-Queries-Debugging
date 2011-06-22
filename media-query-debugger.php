@@ -75,46 +75,9 @@
 		<h2>The Content</h2>
 		<p><strong>Deutsch</strong> Media Queries sind dabei sich zu etablieren, Vor- und Nachteile seien hier kein Thema. Definitiv ist das &bdquo;Debuggen&rdquo; nicht immer einfach und die Layouterstellung kann schnell komplex werden. Diese L&ouml;sung stellt die Umsetzung einer Idee dar, um den jeweiligen Viewport zu kennen, da im obersten Bereich der Seite dargestellt wird. Durch diese Werte kann auf die verschiedenen Weiten (<code>width</code>) eingegangen werden. </p>
 		<p><strong>English</strong> Media Queries are going to establish, the pros and cons are not an issue here. "Debugging" is not easy and creating layouts can be quickly complex. This solution is an idea to know the viewport, since it shows in the upper area of the page. Via these values you can use it for different width.</p>
-		<pre>
-body::before{
-	font-weight: 900;
-	display: block;
-	text-align: center;
-	position: absolute;
-	padding: 1em;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 999;
-}
-
-@media all and (min-width: 981px) {
-	body::before{
-		content: "media query (&gt; 981px) fired";
-		background: rgba( 205, 51, 51, 0.8 );
-	}
-}
-
-@media all and (min-width: 601px) and (max-width: 980px) {
-	body::before{
-		content: "media query (601 &lt; 980px) fired";
-		background: rgba( 202, 225, 255, 0.8 );
-	}
-}
-
-@media all and (min-width: 480px) and (max-width: 600px) {
-	body::before{
-		content: "media query (480 &lt; 600px) fired";
-		background: rgba( 102, 205, 170, 0.8 );
-	}
-}
-
-@media all and (max-width: 479px) {
-	body::before{
-		content: "media query (&lt; 479px) fired";
-		background: rgba( 255, 127, 36, 0.8 );
-	}
-}</pre>
+		<p><strong>The Source</strong> of the stylesheet to see viewport on top. You can also include this; <a href="https://github.com/bueltge/Simple-Media-Queries-Debugging">download the file on Github</a>.<br>
+		<?php highlight_file('debug.css'); ?>
+		</p>
 		
 		<p>i: See also my <a href="http://bueltge.de/test/media-query-tester.php" title="see the Media Queries tester live">Simple Media Queries Tester</a></p>
 	</section>
