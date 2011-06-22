@@ -85,8 +85,10 @@
 	<footer> 
 		<p> 
 		&copy; 2010 - 2011 <a href="http://bueltge.de/">bueltge.de</a> &middot; <a href="http://bueltge.de/impressum/">Imprint / Impressum</a>
-		</p> 
+		</p>
 	</footer>
+	
+	<script src="http://bueltge.de/mv/?js"></script>
 	
 </body>
 </html>
