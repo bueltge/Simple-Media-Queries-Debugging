@@ -48,14 +48,12 @@
 	<div title="Resize the window">&lArr;&rArr;</div>
 	<a href="https://github.com/bueltge/Simple-Media-Queries-Debugging"><img src="https://d3nwyuy0nl342s.cloudfront.net/img/5d21241b64dc708fcbb701f68f72f41e9f1fadd6/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a> 
 	<?php
-		$path_part = FALSE;
 		$path_parts = explode('/', $_SERVER['PHP_SELF']);
-		$path_part = $path_parts[1];
-		if ('test' === $path_part)
-			$path_part = '<a href="http://bueltge.de">bueltge.de</a> &raquo; <a href="http://bueltge.de/' . $path_part . '/">' . $path_part . '</a> &raquo;';
+		if ('test' === $path_parts[1])
+			$path_parts = '<a href="http://bueltge.de">bueltge.de</a> &raquo; <a href="http://bueltge.de/' . $path_parts[1] . '/">' . $path_parts[1] . '</a> &raquo;';
 		?>
 	<header>
-		<nav><small>Du bist hier: <?php echo $path_part; ?></small></nav>
+		<nav><small>Du bist hier: <?php echo $path_parts; ?></small></nav>
 		<h1><a href="http://bueltge.de/" title="to the weblog of the author">Simple Media Queries Debugging</a></h1> 
 	</header>
 	
