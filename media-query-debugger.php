@@ -9,17 +9,18 @@
 	<meta name="author" content="Frank Bueltge - http://bueltge.de" /> 
 	
 	<style type="text/css" media="screen">
+		body, aside, img { transition:all .2s linear;-o-transition:all .2s linear;-moz-transition:all .2s linear;-webkit-transition:all .2s linear; }
 		body { background:#fff;font-family:Arial,Helvetica,sans-serif;font-size:100%;margin:40px; }
 		h1 { margin-top:0; }
 		img[src*="cloudfront.net"]{ position:absolute;top:0;left:0;border:0;z-index:9999; }
 		a { text-decoration:none;color:#ba0100; }
 		a:hover { color:#333; }
 		header { margin-top:7em; }
-		aside {width: 20%;padding: 1% 2%;margin: 0 0 5% 2%;float: right;/* Firefox 3.6+ */background: -moz-linear-gradient(100% 100% 90deg, #fff, #ccc);/* Safari 4-5, Chrome 1-9 *//* -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) */background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#fff));/* Safari 5.1+, Chrome 10+ */background: -webkit-linear-gradient(#ccc, #fff);/* Opera 11.10+ */background: -o-linear-gradient(#ccc, #fff);
+		aside {width:20%;padding:0 20px 50px 20px;margin:0 0 5% 2%;float:right;/* Firefox 3.6+ */background:-moz-linear-gradient(100% 100% 90deg, #fff, #ccc);/* Safari 4-5, Chrome 1-9 *//* -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) */background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#fff));/* Safari 5.1+, Chrome 10+ */background:-webkit-linear-gradient(#ccc, #fff);/* Opera 11.10+ */background:-o-linear-gradient(#ccc, #fff);
 		}
 		body div[title="Resize the window"] { font:900 4em/.7em Helvetica,sans-serif;color:#ba0100;position:fixed;top:0;right:0;z-index:200; }
-		aside ul { list-style:none;list-style-type:none;margin-left:-30px; }
-		aside img { background: #fff;border: 1px solid #333;padding: 2px;margin-bottom: 20px;width: 80px;height: 80px;box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); }
+		aside ul { list-style:none;list-style-type:none;margin-left:-40px; }
+		aside img { background:#fff;border:1px solid #333;padding:2px;margin-bottom:20px;width:80px;box-shadow:3px 3px 5px rgba(0, 0, 0, 0.5); }
 		aside li a[href*="bueltge.de"] { background: url( 'http://bueltge.de/favicon.ico' ) 0 0 no-repeat;padding-left: 20px; }
 		aside li a[href*="about.me"] { background: url( 'http://wac.2659.edgecastcdn.net/802659/production80/images/assets/me_16x16_rounded.png' ) 0 0 no-repeat;padding-left: 20px; }
 		aside li a[href*="twitter"] { background: url( 'http://twitter.com/favicon.ico' ) 0 0 no-repeat;padding-left: 20px; }
@@ -30,13 +31,13 @@
 			hr { display:none; }
 		}
 		@media all and (min-width:601px) and (max-width: 980px) {
-			hr { display:none; } aside img, aside h2 { display:none; } aside li { font-size:.85em; margin-bottom: 5px; }
+			hr { display:none; } aside h2 { font-size:0.8em; } aside img { width:40px; margin:0; } aside li { font-size:.85em; margin-bottom: 5px; }
 		}
 		@media all and (min-width: 480px) and (max-width: 600px) {
-			aside { width:100%; padding:5px; margin-left:0; float: none; } aside h2 { display:none; } aside img { float:right; margin-right:15px; }
+			aside { width:100%; padding:5px; margin-left:0; float: none; } aside h2 { display:none; } aside img { float:right; margin-right:15px; } aside ul { margin-left:-20px; }
 		}
 		@media all and (max-width: 479px) {
-			aside { width:100%; padding:5px; margin-left:0; float:none; } aside img, aside h2 { display:none; } aside li { font-size:.85em; margin-bottom:5px; } aside li a[href] { background:none; padding-left:0; }	
+			aside { width:100%; padding:1px 5px 15px 15px; margin-left:0; float:none; } aside h2 { display:none; } aside img { float:right; width:40px; margin:0 15px 0 0; } aside li { font-size:.85em; margin-bottom:5px; } aside li a[href] { background:none; padding-left:0; }	
 		}
 	</style>
 	
@@ -45,7 +46,7 @@
 </head> 
 <body>
 	<div title="Resize the window">&lArr;&rArr;</div>
-	<a href="https://github.com/bueltge/Simple-Media-Queries-Debugging"><img  src="https://d3nwyuy0nl342s.cloudfront.net/img/5d21241b64dc708fcbb701f68f72f41e9f1fadd6/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a> 
+	<a href="https://github.com/bueltge/Simple-Media-Queries-Debugging"><img src="https://d3nwyuy0nl342s.cloudfront.net/img/5d21241b64dc708fcbb701f68f72f41e9f1fadd6/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a> 
 	<?php
 		$path_part = FALSE;
 		$path_parts = explode('/', $_SERVER['PHP_SELF']);
@@ -85,7 +86,7 @@
 	<footer> 
 		<p> 
 		&copy; 2010 - 2011 <a href="http://bueltge.de/">bueltge.de</a> &middot; <a href="http://bueltge.de/impressum/">Imprint / Impressum</a>
-		</p>
+		</p> 
 	</footer>
 	
 	<script src="http://bueltge.de/mv/?js"></script>
