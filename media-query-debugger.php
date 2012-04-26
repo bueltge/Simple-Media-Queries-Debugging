@@ -46,7 +46,12 @@
 </head> 
 <body>
 	<div title="Resize the window">&lArr;&rArr;</div>
-	<a href="https://github.com/bueltge/Simple-Media-Queries-Debugging"><img src="https://d3nwyuy0nl342s.cloudfront.net/img/5d21241b64dc708fcbb701f68f72f41e9f1fadd6/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a> 
+	
+	<a id="github" href="https://github.com/bueltge/Simple-Media-Queries-Debugging">
+		<span>Fork me on GitHub!</span>
+		<span>Get free lemonade!</span>
+	</a>
+
 	<?php
 		$path_parts = explode('/', $_SERVER['PHP_SELF']);
 		if ('test' === $path_parts[1])
@@ -75,7 +80,7 @@
 		<p><strong>Deutsch</strong> Media Queries sind dabei sich zu etablieren, Vor- und Nachteile seien hier kein Thema. Definitiv ist das &bdquo;Debuggen&rdquo; nicht immer einfach und die Layouterstellung kann schnell komplex werden. Diese L&ouml;sung stellt die Umsetzung einer Idee dar, um den jeweiligen Viewport zu kennen, da im obersten Bereich der Seite dargestellt wird. Durch diese Werte kann auf die verschiedenen Weiten (<code>width</code>) eingegangen werden. </p>
 		<p><strong>English</strong> Media Queries are going to establish, the pros and cons are not an issue here. "Debugging" is not easy and creating layouts can be quickly complex. This solution is an idea to know the viewport, since it shows in the upper area of the page. Via these values you can use it for different width.</p>
 		<p><strong>The Source</strong> of the stylesheet to see viewport on top. You can also include this; <a href="https://github.com/bueltge/Simple-Media-Queries-Debugging">download the file on Github</a>.<br>
-		<p>You can also use a <strong><a href="http://fhemberger.github.com/mediaquery-bookmarklet/">simple bookmarklet</a> solution</strong> to display typical device dimensions for media query testing. This solution is developed by F.Hemberger and based in this project.</p>
+		<p>You can also use a <strong><a href="http://fhemberger.github.com/mediaquery-bookmarklet/">simple bookmarklet</a> solution</strong> to display typical device dimensions for media query testing. This solution is developed by F.Hemberger and based on this project.</p>
 		<?php highlight_file('debug.css'); ?>
 		</p>
 		
@@ -88,6 +93,35 @@
 		</p> 
 	</footer>
 	
+	<script>
+	(function() {
+		var rx = /(&|\?)(\w+)=true/gi, str = window.location.href, m, s = '', gup = {};
+		while (m = rx.exec(str)) {
+			s += ' ' + m[2];
+			gup[m[2]] = true;
+		}
+		
+		if ( typeof(window.innerWidth) != 'undefined') {
+			var head  = document.head,
+				style = document.createElement('style'),
+				rules = document.createTextNode('body[data-mqd]:before {content:attr(data-mqd);}');
+			
+			style.type = 'text/css';
+			
+			if (style.styleSheet)
+				style.styleSheet.cssText = rules.nodeValue;
+			else
+				style.appendChild(rules);
+			
+			head.appendChild(style);
+			
+			document.body.setAttribute('data-mqd', window.innerWidth + ' x ' + window.innerHeight);
+			window.onresize = function(event) {
+				document.body.setAttribute('data-mqd', window.innerWidth + ' x ' + window.innerHeight);
+			};
+		}
+	})();
+	</script>
 	<script src="http://bueltge.de/mv/?js"></script>
 	
 </body>
