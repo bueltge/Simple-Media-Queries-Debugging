@@ -15,6 +15,8 @@ The viewport width and height was add as `a :before` pseudo element on the body 
 
 You can include the `script.js` and/or `debug.css` for debugging in your custom project. It is possible to debugging the viewport easy with the scritp and also with the stylesheet. The difference is the values. The stylesheet has only defined values and the script get all values from the viewport and the stylesheet get also strings about portrait or landscape mode.
 
+Also it is possible you use this solution as an bookmark inside your browser; see on the project [Media query bookmarklet](http://fhemberger.github.com/mediaquery-bookmarklet/) by Frederic Hemberger.
+
 ## Other Notes
 
 ### Contact & Feedback
@@ -26,4 +28,14 @@ Please let me know if you like the small project or you hate it or whatever ... 
 I'm German and my English might be gruesome here and there. So please be patient with me and let me know of typos or grammatical farts. Thanks
 
 ### Licence
-Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, you can thank me and leave a [small donation](http://bueltge.de/wunschliste/ "Wishliste and Donate") for the time I've spent writing and supporting this plugin. And I really don't want to know how many hours of my life this plugin has already eaten ;)
+Good news, this plugin is free for everyone!
+
+(The MIT-License)
+
+Copyright (c) 2011-2012 Frank Bültge
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
