@@ -13,7 +13,7 @@ Media Queries are going to establish, the pros and cons are not an issue here. "
 ## How it works
 The viewport width and height was add as `a :before` pseudo element on the body to help with obtaining values for responsive breakpoints. Also add on this pseudo element small formating values in the stylesheet.
 
-### How use it
+### You use it
 You can include the `script.js` and/or `debug.css` for debugging in your custom project. It is possible to debugging the viewport easy with the scritp and also with the stylesheet. The difference is the values. The stylesheet has only defined values and the script get all values from the viewport and the stylesheet get also strings about portrait or landscape mode.
 
 ### Get as an Bookmarklet
