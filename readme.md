@@ -11,7 +11,7 @@ Media Queries sind dabei sich zu etablieren, Vor- und Nachteile seien hier kein 
 Media Queries are going to establish, the pros and cons are not an issue here. "Debugging" is not easy and creating layouts can be quickly complex. This solution is an idea to know the viewport, since it shows in the upper area of the page. Via these values you can use it for different width.
 
 ## How it works
-The viewport width and height was add as a :before pseudo element on the body to help with obtaining values for responsive breakpoints. Also add on this pseudo element small formating values in the stylesheet.
+The viewport width and height was add as `a :before` pseudo element on the body to help with obtaining values for responsive breakpoints. Also add on this pseudo element small formating values in the stylesheet.
 
 You can include the `script.js` for debugging in your custom project.
 
@@ -20,7 +20,7 @@ You can include the `script.js` for debugging in your custom project.
 ### Contact & Feedback
 The project is designed and developed by me ([Frank Bültge](http://bueltge.de))
 
-Please let me know if you like the plugin or you hate it or whatever ... Please fork it, add an issue for ideas and bugs.
+Please let me know if you like the small project or you hate it or whatever ... Please fork it, add an issue for ideas and bugs.
 
 ### Disclaimer
 I'm German and my English might be gruesome here and there. So please be patient with me and let me know of typos or grammatical farts. Thanks
